@@ -9,36 +9,34 @@
 
     <!-- ++++++++++++++++++++ TAB WILL START FROM HERE WITH CENTER ALIGNMENT ++++++++++++++++++++ -->
 
-    <div class="form-container">
-        <h1>Admission Form</h1>
+    <div class="container" style="text-align: center; max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+        <h1 style="color: #333;">Admission Form</h1>
         <form action="/submit" method="POST">
-            <div class="tab">
-                <h2>Student Details</h2>
-                <label for="studentName">Name:</label><br>
-                <input type="text" id="studentName" name="studentName" class="input-field"><br><br>
-                <label for="studentAge">Age:</label><br>
-                <input type="number" id="studentAge" name="studentAge" class="input-field"><br><br>
+            <div class="tab" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                <h2 style="color: #555;">Student Details</h2>
+                <label for="studentName" style="display: block; margin-bottom: 5px;">Name:</label>
+                <input type="text" id="studentName" name="studentName" class="input-field" style="width: 80%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+                <label for="studentAge" style="display: block; margin-bottom: 5px;">Age:</label>
+                <input type="text" id="studentAge" name="studentAge" class="input-field" style="width: 80%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
             </div>
 
-            <div class="tab">
-                <h2>Parent Details</h2>
-                <label for="parentName">Parent Name:</label><br>
-                <input type="text" id="parentName" name="parentName" class="input-field"><br><br>
-                <label for="parentContact">Contact Number:</label><br>
-                <input type="text" id="parentContact" name="parentContact" class="input-field"><br><br>
+            <div class="tab" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                <h2 style="color: #555;">Parent Details</h2>
+                <label for="parentName" style="display: block; margin-bottom: 5px;">Parent Name:</label>
+                <input type="text" id="parentName" name="parentName" class="input-field" style="width: 80%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+                <label for="parentContact" style="display: block; margin-bottom: 5px;">Contact Number:</label>
+                <input type="text" id="parentContact" name="parentContact" class="input-field" style="width: 80%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
             </div>
 
-            <div class="tab">
-                <h2>Address Details</h2>
-                <label for="address">Address:</label><br>
-                <input type="text" id="address" name="address" class="input-field"><br><br>
-                <label for="city">City:</label><br>
-                <input type="text" id="city" name="city" class="input-field"><br><br>
+            <div class="tab" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 5px;">
+                <h2 style="color: #555;">Address Details</h2>
+                <label for="address" style="display: block; margin-bottom: 5px;">Address:</label>
+                <input type="text" id="address" name="address" class="input-field" style="width: 80%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
+                <label for="city" style="display: block; margin-bottom: 5px;">City:</label>
+                <input type="text" id="city" name="city" class="input-field" style="width: 80%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;"><br>
             </div>
 
-            <!-- Add more tabs as needed -->
-
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="submit-button" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Submit</button>
         </form>
     </div>
     <!-- ++++++++++++++++++++ TAB WILL END ++++++++++++++++++++ -->

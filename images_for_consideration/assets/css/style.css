@@ -1,0 +1,864 @@
+/*=====================================================
+Table of contents
+=======================================================
+
+1. Google fonts
+2. Theme variables
+3. General css
+4. Theme default css
+5. Margin & padding
+6. Site title css
+7. Theme button
+8. Container
+9. Scroll top css
+10. Breadcrumb css
+11. Pagination css 
+12. Application css 
+
+=======================================================*/
+
+
+/*====================
+1. Google fonts
+======================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&amp;family=Roboto:wght@100;300;400;500;700;900&amp;display=swap');
+
+
+/*====================
+2. Theme variables
+======================*/
+
+:root {
+  --body-font: 'Roboto', sans-serif;
+  --heading-font: 'Yantramanav', sans-serif;
+  --theme-color: #116E63;
+  --theme-color2: #FDA31B;
+  --theme-color-light: rgb(17, 110, 99, 0.09);
+  --theme-bg-light: #F2F3F5;
+  --body-text-color: #757F95;
+  --color-white: #ffffff;
+  --color-dark: #19232B;
+  --hero-overlay-color: #000000;
+  --slider-arrow-bg: rgba(255, 255, 255, 0.2);
+  --box-shadow: 0 0 40px 5px rgb(0 0 0 / 5%);
+  --box-shadow2: 0 0 15px rgba(0, 0, 0, 0.17);
+  --transition: all .5s ease-in-out;
+  --transition2: all .3s ease-in-out;
+  --border-info-color: rgba(0, 0, 0, 0.08);
+  --border-info-color2: rgba(0, 0, 0, 0.05);
+  --border-white-color: rgba(255, 255, 255, 0.08);
+  --border-white-color2: rgba(255, 255, 255, 0.05);
+  --footer-bg: #012758;
+  --footer-bg2: #116E63;
+  --footer-text-color: #F5FAFF;
+}
+
+/*  */
+
+
+/*====================
+3. General css
+======================*/
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  scroll-behavior: inherit !important;
+}
+
+html,
+body {
+  height: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-style: normal;
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--body-text-color);
+  line-height: 1.8;
+}
+
+a {
+  color:  var(--color-dark);
+  display: inline-block;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+  outline: none;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-blue);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color:  var(--color-dark);
+  margin: 0px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  line-height: 1;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  margin: 0px;
+}
+
+.img,
+img {
+  max-width: 100%;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  height: auto;
+}
+
+label {
+  color: #999;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+*::-moz-selection {
+  background: #d6b161;
+  color: var(--color-white);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #555;
+  color: var(--color-white);
+  text-shadow: none;
+}
+
+::selection {
+  background: #555;
+  color: var(--color-white);
+  text-shadow: none;
+}
+
+*::-moz-placeholder {
+  color: #999;
+  font-size: 16px;
+  opacity: 1;
+}
+
+*::placeholder {
+  color: #999;
+  font-size: 16px;
+  opacity: 1;
+}
+
+
+
+/*===================
+5. Theme default css
+======================*/
+
+.ovrflow-hidden {
+  overflow: hidden;
+}
+
+.position-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-pd {
+  padding: 0 7rem;
+}
+
+.s-pd {
+  padding: 0 12rem;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.bg {
+  background: var(--theme-bg-light);
+}
+
+
+
+
+/*====================
+6. Margin & padding
+======================*/
+
+.pb-140 {
+  padding-bottom: 140px;
+}
+
+.pd-50 {
+  padding: 50px 0;
+}
+
+.py-120 {
+  padding: 120px 0;
+}
+
+.pt-120 {
+  padding-top: 120px;
+}
+
+.pb-120 {
+  padding-bottom: 120px;
+}
+
+.pt-0 {
+  padding-top: 0px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pt-50 {
+  padding-top: 50px;
+}
+
+.pt-60 {
+  padding-top: 60px;
+}
+
+.pt-70 {
+  padding-top: 70px;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.pt-90 {
+  padding-top: 90px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-50 {
+  padding-bottom: 50px;
+}
+
+.pb-60 {
+  padding-bottom: 60px;
+}
+
+.pb-70 {
+  padding-bottom: 70px;
+}
+
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.pb-90 {
+  padding-bottom: 90px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mt-90 {
+  margin-top: 90px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mt-120 {
+  margin-top: 120px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-70 {
+  margin-bottom: 70px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mb-90 {
+  margin-bottom: 90px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-120 {
+  margin-bottom: 120px;
+}
+
+.mr-300 {
+  margin-right: 300px;
+}
+
+.ml-300 {
+  margin-left: 300px;
+}
+
+
+
+/*====================
+7. Site title css
+======================*/
+
+.site-heading {
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.site-title-tagline {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--theme-color2);
+  position: relative;
+  border-bottom: 2px solid var(--theme-color2);
+}
+
+.site-title-tagline i{
+  line-height: 0;
+  font-size: 20px;
+}
+
+.site-title {
+  font-weight: 800;
+  text-transform: capitalize;
+  font-size: 55px;
+  color:  var(--color-dark);
+  margin-top: 10px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.site-title span{
+  color: var(--theme-color2);
+}
+
+.site-heading p {
+  margin-top: 15px;
+}
+
+.heading-divider {
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 10px; 
+  border: 3px solid rgba(33, 46, 84, 1);
+  border-right-color: transparent;
+}
+
+.heading-divider.light{
+  border-color: rgba(255, 255, 255, 0.2);
+  border-right-color: transparent;
+}
+
+.heading-divider::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  background-color: var(--theme-color);
+  top: 0;
+  bottom: 0;
+  left: 18px;
+}
+
+
+
+
+/*====================
+8. Theme button
+======================*/
+
+.theme-btn {
+  font-size: 14px;
+  color: var(--color-white);
+  padding: 14px 20px;
+  transition: var(--transition);
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 50px 50px 50px 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+  background: var(--theme-color2);
+  box-shadow: var(--box-shadow);
+  z-index: 1;
+}
+
+.theme-btn::before {
+  content: "";
+  height: 300px;
+  width: 300px;
+  background:  var(--theme-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%) scale(0);
+  transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.theme-btn:hover {
+  color: var(--color-white);
+}
+
+.theme-btn:hover::before {
+  transform: translateY(-50%) translateX(-50%) scale(1);
+}
+
+.theme-btn i {
+  margin-left: 5px;
+}
+
+.theme-btn span {
+  margin-right: 5px;
+}
+
+.theme-btn2{
+  background: var(--color-white);
+  color: var(--color-dark);
+}
+
+.theme-btn2::before{
+  background: var(--theme-color);
+}
+
+.theme-btn2:hover{
+  color: var(--color-white);
+}
+
+
+
+
+/*====================
+9. Container
+======================*/
+
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+
+
+
+/*====================
+10. Scroll top css
+======================*/
+
+#scroll-top {
+  position: fixed;
+  bottom: -20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  color: var(--color-white);
+  background-color: var(--theme-color2);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  box-shadow: var(--box-shadow2);
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#scroll-top.active{
+  opacity: 1;
+  visibility: visible;
+  bottom: 20px;
+}
+
+
+@media all and (min-width: 768px) and (max-width: 1199px) {
+  #scroll-top.active {
+    bottom: 100px;
+  }
+}
+
+
+
+/*====================
+46. Breadcrumb css
+======================*/
+
+.site-breadcrumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  position: relative;
+  padding-top: 170px;
+  padding-bottom: 150px;
+  z-index: 1;
+}
+
+.site-breadcrumb::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--hero-overlay-color);
+  opacity: 0.65;
+  z-index: -1;
+}
+
+.site-breadcrumb .breadcrumb-title {
+  font-size: 45px;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.site-breadcrumb .breadcrumb-menu {
+  position: relative;
+  z-index: 1;
+}
+
+.site-breadcrumb .breadcrumb-menu li {
+  position: relative;
+  display: inline-block;
+  margin-left: 25px;
+  color: var(--color-white);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.site-breadcrumb .breadcrumb-menu li a {
+  color: var(--color-white);
+  transition: all 0.5s ease-in-out;
+}
+
+.site-breadcrumb .breadcrumb-menu li::before {
+  position: absolute;
+  content: '\f101';
+  font-family: 'Font Awesome 6 Pro';
+  right: -21px;
+  top: 1px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--color-white);
+}
+
+.site-breadcrumb .breadcrumb-menu li:first-child {
+  margin-left: 0;
+}
+
+.site-breadcrumb .breadcrumb-menu li:last-child:before {
+  display: none;
+}
+
+.site-breadcrumb .breadcrumb-menu li a:hover {
+  color: var(--theme-color);
+}
+
+.site-breadcrumb .breadcrumb-menu li.active {
+  color: var(--theme-color2);
+}
+
+@media (max-width: 991px) {
+  .site-breadcrumb {
+    padding-top: 230px;
+  }
+}
+
+
+
+
+/*====================
+47. Pagination css 
+======================*/
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.pagination .page-link {
+  border: none;
+  background:  var(--theme-color2);
+  color: var(--color-white);
+  margin: 0 10px;
+  border-radius: 12px !important;
+  width: 40px;
+  height: 40px;
+  line-height: 28px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.pagination .page-link:hover,
+.pagination .page-item.active .page-link {
+  background: var(--theme-color);
+  color: var(--color-white);
+}
+
+
+
+/*====================
+53. Application css 
+======================*/
+
+.application{
+  position: relative;
+}
+
+.application-form{
+  padding: 40px;
+  border-radius: 10px;
+  background: var(--color-white);
+  box-shadow: var(--box-shadow);
+}
+
+.application-form h3{
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--border-info-color);
+}
+
+.application-form .form-group{
+  margin-bottom: 18px;
+}
+
+.application-form .form-group label{
+  color: #212536;
+  margin-bottom: 5px;
+}
+
+.application-form .form-control,
+.application-form .form-select{
+  padding: 12px 18px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.application-form .form-control:focus,
+.application-form .form-select:focus{
+  border-color: var(--theme-color);
+}
+
+.application-form .form-check-input{
+  margin-top: 6.5px;
+  box-shadow: none;
+}
+
+.application-form .form-check-input:focus{
+  border-color: var(--theme-color);
+}
+
+.application-form .form-check a{
+  color: var(--theme-color);
+}
+
+.application-form .form-check label{
+  color: #212536;
+  font-weight: 500;
+}
+
+.application-form .theme-btn{
+  margin-top: 30px;
+}
+
