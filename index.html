@@ -9,7 +9,38 @@
 
     <!-- ++++++++++++++++++++ TAB WILL START FROM HERE WITH CENTER ALIGNMENT ++++++++++++++++++++ -->
 
+    <div class="form-container">
+        <h1>Admission Form</h1>
+        <form action="/submit" method="POST">
+            <div class="tab">
+                <h2>Student Details</h2>
+                <label for="studentName">Name:</label><br>
+                <input type="text" id="studentName" name="studentName" class="input-field"><br><br>
+                <label for="studentAge">Age:</label><br>
+                <input type="number" id="studentAge" name="studentAge" class="input-field"><br><br>
+            </div>
 
+            <div class="tab">
+                <h2>Parent Details</h2>
+                <label for="parentName">Parent Name:</label><br>
+                <input type="text" id="parentName" name="parentName" class="input-field"><br><br>
+                <label for="parentContact">Contact Number:</label><br>
+                <input type="text" id="parentContact" name="parentContact" class="input-field"><br><br>
+            </div>
+
+            <div class="tab">
+                <h2>Address Details</h2>
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" class="input-field"><br><br>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" class="input-field"><br><br>
+            </div>
+
+            <!-- Add more tabs as needed -->
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
     <!-- ++++++++++++++++++++ TAB WILL END ++++++++++++++++++++ -->
 </body>
 </html>
