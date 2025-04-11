@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admission Form</title>
+    <link rel="stylesheet" href="css/admission.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="" alt="School Logo">
+                <h1></h1>
+            </div>
+            <div class="badge">Admission Form</div>
+        </header>
+
+        <form id="admissionForm" action="/submit_admission" method="post">
+            <!-- Student Information Section -->
+            <div class="form-container">
+                <div class="form-section">
+                    <h3>Student Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="admissionNo">Admission No.</label>
+                        <input type="text" id="admissionNo" name="admissionNo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="First Middle Last" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" selected>Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="photo">Student Photograph</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Parent/Guardian Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="fatherName">Father's Name</label>
+                        <input type="text" id="fatherName" name="fatherName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motherName">Mother's Name</label>
+                        <input type="text" id="motherName" name="motherName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guardianName">Guardian's Name (if applicable)</label>
+                        <input type="text" id="guardianName" name="guardianName">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentPhone">Phone Number</label>
+                        <input type="tel" id="parentPhone" name="parentPhone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentEmail">Email Address</label>
+                        <input type="email" id="parentEmail" name="parentEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="parentOccupation">Occupation</label>
+                        <input type="text" id="parentOccupation" name="parentOccupation">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergencyContact">Emergency Contact</label>
+                        <input type="tel" id="emergencyContact" name="emergencyContact" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Academic Information Section -->
+            <div class="form-container">
+                <div class="form-section">
+                    <h3>Academic Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="previousSchool">Previous School</label>
+                        <input type="text" id="previousSchool" name="previousSchool">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gradeLevel">Grade Level</label>
+                        <select id="gradeLevel" name="gradeLevel" required>
+                            <option value="" selected>Select</option>
+                            <option value="kg">Kindergarten</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="academicRecords">Academic Records</label>
+                        <input type="file" id="academicRecords" name="academicRecords" accept=".pdf,.doc,.docx">
+                        <small>Upload previous report cards or transcripts</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="achievements"></label>
+                        
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>Other Information</h3>
+                    
+                    <div class="form-group">
+                        <label for=""></label>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for=""></label>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for=""></label>
+                        
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            <div class="form-container">
+                <div class="form-section full-width">
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                            I hereby declare that the information provided is true and correct to the best of my knowledge.
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="submit-section">
+                <button type="submit" id="submitBtn">Submit Admission</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/admission.js"></script>
+</body>
+</html>
