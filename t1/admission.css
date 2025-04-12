@@ -1,0 +1,106 @@
+ /* Reset and base styles */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f8fb;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Steps */
+.steps {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.step.active {
+  border-color: #3498db;
+  background-color: #3498db;
+  color: white;
+}
+
+/* Form step sections */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.submit-section {
+  text-align: right;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

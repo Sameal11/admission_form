@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>School Admission Form</title>
+  <link rel="stylesheet" href="admission.css">
+  <script src="admission.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Step Indicators -->
+    <div class="steps">
+      <div class="step active" id="step1">1. Student Info</div>
+      <div class="step" id="step2">2. Parent Info</div>
+      <div class="step" id="step3">3. Academic Info</div>
+      <div class="step" id="step4">4. Document upload </div>
+      <div class="step" id="step5"> 5. Payment</div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="form-step active" id="studentInfo">
+      <h2>Student Information</h2>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text">
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Date of Birth</label>
+        <input type="date" class="form-control" name="dateofbirth" placeholder="">
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <textarea rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Student Photograph</label>
+        <input type="file">
+      </div>
+      <div class="submit-section">
+        <button type="button" onclick="goToParentInfo()">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="form-step" id="parentInfo">
+      <h2>Parent/Guardian Information</h2>
+      <div class="form-group">
+        <label>Father's Name</label>
+        <input type="text">
+      </div>
+      <div class="form-group">
+        <label>Mother's Name</label>
+        <input type="text">
+      </div>
+      <div class="form-group">
+        <label>Guardian's Name (if applicable)</label>
+        <input type="text">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text">
+      </div>
+      <div class="submit-section">
+        <button type="button" onclick="goToStudentInfo()">Back</button>
+        <button type="button" onclick="goToAcademicInfo()">Next</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="form-step" id="academicInfo">
+      <h2>Academic Information</h2>
+      <div class="form-group">
+        <label>Class Applying For</label>
+        <select>
+          <option>Nursery</option>
+          <option>LKG</option>
+          <option>UKG</option>
+          <option>1st Standard</option>
+          <option>2nd Standard</option>
+          <!-- Add more options -->
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Previous School (if any)</label>
+        <input type="text">
+      </div>
+      <div class="form-group">
+        <label>Special Needs / Comments</label>
+        <textarea rows="3"></textarea>
+      </div>
+      <div class="submit-section">
+        <button type="button" onclick="goToParentInfo()">Back</button>
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
