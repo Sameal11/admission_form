@@ -5,6 +5,8 @@
   <title>School Admission Form</title>
   <link rel="stylesheet" href="admission.css">
   <script src="admission.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.jsv"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -15,7 +17,7 @@
       <div class="step" id="step2">2. Parent Info</div>
       <div class="step" id="step3">3. Academic Info</div>
       <div class="step" id="step4">4. Document upload </div>
-      <div class="step" id="step5"> 5. Payment</div>
+      <div class="step" id="step5"> 5. Status</div>
     </div>
 
     <!-- Step 1 -->
@@ -38,12 +40,31 @@
         <input type="date" class="form-control" name="dateofbirth" placeholder="">
       </div>
       <div class="form-group">
-        <label>Address</label>
-        <textarea rows="3"></textarea>
+        <label for="bloodGroup">Blood Group</label>
+        <select id="bloodGroup" name="bloodGroup" required>
+          <option value="" selected disabled>Select</option>
+          <option value="A+">A+</option>
+          <option value="A-">A−</option>
+          <option value="B+">B+</option>
+          <option value="B-">B−</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB−</option>
+          <option value="O+">O+</option>
+          <option value="O-">O−</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Permanent Address</label>
+        <textarea rows="2"></textarea>
       </div>
       <div class="form-group">
         <label>Student Photograph</label>
         <input type="file">
+      </div>
+      <div class="form-group">
+        <label for="">Aadhar Number/Eid</label>
+        <input type="text" maxlength="12" placeholder="3242-3244-2216">
       </div>
       <div class="submit-section">
         <button type="button" onclick="goToParentInfo()">Next</button>
@@ -53,13 +74,73 @@
     <!-- Step 2 -->
     <div class="form-step" id="parentInfo">
       <h2>Parent/Guardian Information</h2>
+      <!--Father details-->
+      <h3>Father Details</h3>
       <div class="form-group">
         <label>Father's Name</label>
         <input type="text">
       </div>
       <div class="form-group">
+        <label for="">Aadhar Number/Eid</label>
+        <input type="text" maxlength="12" placeholder="3242-3244-2216">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="text" placeholder="+911234567890">
+      </div>
+      <div class="form-group">
+        <label>qualification</label>
+      </div>
+      <div class="form-group">
+        <label for="">Occupation</label>
+        <select id="parentOccupation" name="parentOccupation" required>
+          <option value="" disabled selected>Select Occupation</option>
+          <option value="engineer">Engineer</option>
+          <option value="doctor">Doctor</option>
+          <option value="teacher">Teacher</option>
+          <option value="business">Business</option>
+          <option value="government">Government Employee</option>
+          <option value="private">Private Sector</option>
+          <option value="homemaker">Homemaker</option>
+          <option value="Farmer">Farmer</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Office Address</label>
+        <textarea rows="2"></textarea>
+      </div>
+      <!--Mother details-->
+      <h3>Mother Details</h3>
+      <div class="form-group">
         <label>Mother's Name</label>
         <input type="text">
+      </div>
+      <div class="form-group">
+        <label for="">Aadhar Number/Eid</label>
+        <input type="text" maxlength="12" placeholder="3242-3244-2216">
+      </div>
+      <div class="form-group">
+        <label>qualification</label>
+      </div>
+      <div class="form-group">
+        <label for="">Occupation</label>
+        <select id="parentOccupation" name="parentOccupation" required>
+          <option value="" disabled selected>Select Occupation</option>
+          <option value="engineer">Engineer</option>
+          <option value="doctor">Doctor</option>
+          <option value="teacher">Teacher</option>
+          <option value="business">Business</option>
+          <option value="government">Government Employee</option>
+          <option value="private">Private Sector</option>
+          <option value="homemaker">Homemaker</option>
+          <option value="Farmer">Farmer</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Office Address</label>
+        <textarea rows="2"></textarea>
       </div>
       <div class="form-group">
         <label>Guardian's Name (if applicable)</label>
@@ -67,7 +148,11 @@
       </div>
       <div class="form-group">
         <label>Phone Number</label>
-        <input type="text">
+        <input type="text" placeholder="+911234567890">
+      </div>
+      <div class="form-group">
+        <label>Whatapp Number</label>
+        <input type="text" placeholder="+911234567890">
       </div>
       <div class="submit-section">
         <button type="button" onclick="goToStudentInfo()">Back</button>
@@ -78,29 +163,134 @@
     <!-- Step 3 -->
     <div class="form-step" id="academicInfo">
       <h2>Academic Information</h2>
+      <h3>previous School Details(If any)</h3>
       <div class="form-group">
-        <label>Class Applying For</label>
-        <select>
-          <option>Nursery</option>
-          <option>LKG</option>
-          <option>UKG</option>
-          <option>1st Standard</option>
-          <option>2nd Standard</option>
-          <!-- Add more options -->
+        <div>
+          <label for="">School Name</label>
+          <input type="text">
+        </div>
+        <div>
+          <label for=""> School Address</label>
+          <textarea rows="2"></textarea>
+        </div>
+        <div>
+          <label for=""> highest qualification</label>
+            <select name="highestQualification" id="highestQualification">
+              <option value="" disabled selected>Select </option>
+              <option value="LKG">LKG</option>
+              <option value="UKG">UKG</option>
+              <option value="1st Standard">1st Standard</option>
+              <option value="2nd Standard">2nd Standard</option>
+              <option value="3rd Standard">3rd Standard</option>
+              <option value="4th Standard">4th Standard</option>
+              <option value="6th Standard">6th Standard</option>
+              <option value="7th Standard">7th Standard</option>
+              <option value="8th Standard">8th Standard</option>
+              <option value="9th Standard">9th Standard</option>
+              <option value="10th Standard">10th Standard</option>
+              <option value="11th Standard">11th Standard</option>
+            </select>
+        </div>
+        <label for=""> highest qualification</label>
+        <select name="" id="">
+          <option value="" disabled selected>Select </option>
+          <option value="LKG">LKG</option>
+          <option value="UKG">UKG</option>
+          <option value="1st Standard">1st Standard</option>
+          <option value="2nd Standard">2nd Standard</option>
+          <option value="3rd Standard">3rd Standard</option>
+          <option value="4th Standard">4th Standard</option>
+          <option value="6th Standard">6th Standard</option>
+          <option value="7th Standard">7th Standard</option>
+          <option value="8th Standard">8th Standard</option>
+          <option value="9th Standard">9th Standard</option>
+          <option value="10th Standard">10th Standard</option>
+          <option value="11th Standard">11th Standard</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Previous School (if any)</label>
-        <input type="text">
+        <label for="">Grade/Percentage</label>
+        <input type="text" maxlength="2">
+      </div>
+        <h3>Current School Details</h3>
+      <div class="form-group">
+        <label>Class Applying For</label>
+        <select>
+          <option value="" disabled selected>Select </option>
+          <option value="Nursery">Nursery</option>
+          <option value="LKG">LKG</option>
+          <option value="UKG">UKG</option>
+          <option value="1st Standard">1st Standard</option>
+          <option value="2nd Standard">2nd Standard</option>
+          <option value="3rd Standard">3rd Standard</option>
+          <option value="4th Standard">4th Standard</option>
+          <option value="6th Standard">6th Standard</option>
+          <option value="7th Standard">7th Standard</option>
+          <option value="8th Standard">8th Standard</option>
+          <option value="9th Standard">9th Standard</option>
+          <option value="10th Standard">10th Standard</option>
+          <option value="11th Standard">11th Standard</option>
+         
+        </select>
+      </div>
+      <div class="form-group">
+        <label>admission No</label>
+        <input type="text" maxlength="4">
+      </div>
+      <div class="form-group">
+        <label for="academicYear"> academic Year</label>
+        <input type="text" id="academicYear" name="academicYear" readonly>
+      </div >
+      <div class="form-group">
+        <label for="">Section</label>
+        <select id="section" name="section">
+          <option value="" disabled selected>Select </option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="extra curricular interest">Extra curricular interest</label>
+        <select name="" id="">
+          <option value="" disabled selected>Select </option>
+          <option value="chess">chess</option>
+          <option value="Football">Football</option>
+          <option value="painting">painting</option>
+        </select>
       </div>
       <div class="form-group">
         <label>Special Needs / Comments</label>
-        <textarea rows="3"></textarea>
+        <textarea rows="2"></textarea>
       </div>
       <div class="submit-section">
         <button type="button" onclick="goToParentInfo()">Back</button>
-        <button type="submit">Submit</button>
+        <button type="button" onclick="goToDocumentUpload()">Next</button>
       </div>
+    </div>
+    <div class="form-step" id="documentupload">
+      <div class="form-group">
+        <label>Previous Marksheet</label>
+        <input type="file">
+      </div>
+      <div class="form-group">
+        <label>Transfer Certificate</label>
+        <input type="file">
+      </div>
+      <div class="form-group">
+        <label>Character Certificate</label>
+        <input type="file">
+      </div>
+      <div class="form-group">
+        <label>Payment Receipt</label>
+        <input type="file">
+      </div>
+      <div class="submit-section">
+        <button type="button" onclick="goToAcademicInfo()">Back</button>
+        <button type="button" onclick="">submit</button>
+      </div>
+
     </div>
   </div>
 </body>

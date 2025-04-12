@@ -20,3 +20,30 @@ function goToParentInfo() {
 function goToAcademicInfo() {
   showStep('academicInfo', 2);
 }
+function goToDocumentUpload(){
+  showStep('documentupload', 3);
+}
+function goToStatus(){
+  showStep('status', 4);
+}
+
+//academic year
+function setCurrentAcademicYear() {
+  const input = document.getElementById("academicYear");
+  const today = new Date();
+  const currentMonth = today.getMonth(); // 0 = Jan, 11 = Dec
+  let startYear;
+
+  // Assuming academic year starts in April
+  if (currentMonth >= 3) {
+    startYear = today.getFullYear();
+  } else {
+    startYear = today.getFullYear() - 1;
+  }
+
+  const endYear = startYear + 1;
+  input.value = `${startYear}-${endYear}`;
+}
+
+window.addEventListener("DOMContentLoaded", setCurrentAcademicYear);
+
