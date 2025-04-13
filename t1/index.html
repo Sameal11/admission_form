@@ -6,7 +6,7 @@
   <title>School Admission Form</title>
   <link rel="stylesheet" href="admission.css">
   <script src="admission.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.jsv"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
 </head>
 
@@ -15,16 +15,12 @@
   <div class="container">
     <!-- Step Indicators -->
     <div class="steps">
-      <div class="step active" id="step0" onclick="showStep('studentInfo')">Student Info</div>
+      <div class="step active " id="step0" onclick="showStep('studentInfo')">Student Info</div>
       <div class="step" id="step1" onclick="showStep('parentInfo')">Parent Info</div>
-      <div class="step" id="step2" onclick="showStep('academicInfo')">Other Info</div>
+      <div class="step" id="step2" onclick="showStep('otherInfo')">Other Info</div>
       <div class="step" id="step3" onclick="showStep('documentupload')">Document Upload</div>
       <div class="step" id="step4" onclick="showStep('statuses')">Status</div>
     </div>
-
-    <script>
-      
-    </script>
 
     <!-- Step 1 -->
     <div class="form-step active" id="studentInfo">
@@ -231,7 +227,7 @@
 
 
     <!-- Step 3 -->
-    <div class="form-step" id="academicInfo">
+    <div class="form-step" id="otherInfo">
         <h2>Other Information</h2>
         
         <div class="container">
@@ -342,65 +338,65 @@
           <input type="text" id="previousSchoolPercentage" name="previousSchoolPercentage" placeholder="Enter Percentage or Grade" required>
         </div>
 
-      </div>
+        </div>
 
-  </div>
-
-  <!-- DOCUMENT UPLOAD SECTION -->
-
-  <div class="form-step" id="documentupload">
-    <h2>Document Upload</h2>
-    <div class="container">
-      <div class="form-group">
-        <label for="photoUpload">Upload Passport Size Photo</label>
-        <input type="file" id="photoUpload" name="photoUpload" accept="image/*" required>
-      </div>
-      <div class="form-group">
-        <label for="aadharUpload">Upload Aadhar Card</label>
-        <input type="file" id="aadharUpload" name="aadharUpload" accept="application/pdf,image/*" required>
-      </div>
-      <div class="form-group">
-        <label for="birthCertificateUpload">Upload Birth Certificate</label>
-        <input type="file" id="birthCertificateUpload" name="birthCertificateUpload" accept="application/pdf,image/*" required>
-      </div>
-      <div class="form-group">
-        <label for="previousMarksheetUpload">Upload Previous Class Marksheet</label>
-        <input type="file" id="previousMarksheetUpload" name="previousMarksheetUpload" accept="application/pdf,image/*" required>
-      </div>
     </div>
 
+    <!-- DOCUMENT UPLOAD SECTION -->
+    <!-- Step 4-->
+    <div class="form-step" id="documentupload">
+      <h2>Document Upload</h2>
+      <div class="container">
+        <div class="form-group">
+          <label for="photoUpload">Upload Passport Size Photo</label>
+          <input type="file" id="photoUpload" name="photoUpload" accept="image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="aadharUpload">Upload Aadhar Card</label>
+          <input type="file" id="aadharUpload" name="aadharUpload" accept="application/pdf,image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="birthCertificateUpload">Upload Birth Certificate</label>
+          <input type="file" id="birthCertificateUpload" name="birthCertificateUpload" accept="application/pdf,image/*" required>
+        </div>
+        <div class="form-group">
+          <label for="previousMarksheetUpload">Upload Previous Class Marksheet</label>
+          <input type="file" id="previousMarksheetUpload" name="previousMarksheetUpload" accept="application/pdf,image/*" required>
+        </div>
+      </div>
 
-    <div class="form-group" style="margin-top: 20px;">
-      <label for="additionalDocuments">Upload Additional Documents (if any)</label>
-      <button type="button" id="addDocumentButton" onclick="addDocumentField()">Add More Documents</button>
+      <div class="row" style="margin-top: 20px;">
+        <!-- Label and Add Button in same row -->
+        <div class="form-group col-md-6 d-flex justify-content-between align-items-center">
+          <label for="additionalDocuments" class="mb-0">Upload Additional Documents (if any)</label>
+          <button type="button" id="addDocumentButton" onclick="addDocumentField()" class="btn btn-secondary">
+            Add More Documents
+          </button>
+        </div>
+        <div id="additionalDocuments" class="form-group col-md-6">
+        <!-- Additional document fields will be added here -->
+  
+        </div>
+      </div>
+      
+        <!-- Submit Button -->
+        <div class="form-group col-md-6 text-end" style="margin-top: 20px;">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+     
     </div>
-    <div id="additionalDocuments">
-      <!-- Additional document fields will be added here -->
 
-    <script>
-      function addDocumentField() {
-      const additionalDocuments = document.getElementById('additionalDocuments');
-      const newField = document.createElement('div');
-      newField.className = 'form-group';
-      newField.innerHTML = `
-        <label for="additionalDocument">Upload Additional Document</label>
-        <input type="file" name="additionalDocument" accept="application/pdf,image/*">
-      `;
-      additionalDocuments.appendChild(newField);
-      }
-    </script>
+    <!--step4-->
+    <div class="form-step" id="statuses">
+      <h2>Application Status</h2>
+      <div class="container">
+        <div class="form-group">
+          <label for="status">Application Status</label>
 
-  </div>
-
-
-  <!-- STATUS SECTION -->
-
-
-  <div class="form-step" id="status">
-    <h2>Application Status</h2>
-    <div class="container">
-      <p>Your application is currently under review. You will be notified via email once the review is complete.</p>
-      <p>For any queries, please contact the school office.</p>
+        </div>
+        <p>Your application is currently under review. You will be notified via email once the review is complete.</p>
+        <p>For any queries, please contact the school office.</p>
+      </div>
     </div>
 
     
