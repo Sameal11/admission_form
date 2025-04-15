@@ -14,11 +14,29 @@
 
   <div class="container">
     <!-- Step Indicators -->
-    <div class="steps">
+    <!-- <div class="steps">
       <div class="step active " id="step0" onclick="showStep('studentInfo')">Student Info</div>
       <div class="step" id="step1" onclick="showStep('otherInfo')">Other Info</div>
       <div class="step" id="step2" onclick="showStep('documentupload')">Document Upload</div>
       <div class="step" id="step3" onclick="showStep('extrainfo')">Extra Information</div>
+    </div> -->
+
+    <div class="steps" >
+
+      <ul class="steps">
+          <li class="nav-item">
+            <a class="nav-link step active"   id="step0"  onclick="showStep('studentInfo')" aria-current="page ">General Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link step" id="step1" onclick="showStep('otherInfo')" href="#">Other Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link step" id="step2" onclick="showStep('documentupload')" href="#">Document Upload</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link step" id="step3" onclick="showStep('extrainfo')" href="#">Extra Information</a>
+          </li>
+        </ul>
     </div>
 
     <!-- Step 1 -->

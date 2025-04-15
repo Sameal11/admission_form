@@ -29,7 +29,7 @@ body {
 /* Steps */
 .steps {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   margin-bottom: 5px;
 }
 
@@ -46,7 +46,7 @@ body {
 .step.active {
   border-color: #3498db;
   background-color: #3498db;
-  color: white;
+  color: rgb(241, 237, 237);
 }
 
 /* Form step sections */
